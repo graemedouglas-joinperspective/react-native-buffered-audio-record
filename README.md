@@ -1,22 +1,24 @@
 
-# react-native-audio-record
+# react-native-buffered-audio-record
 Audio record buffers for iOS and Android.
 
 ## Install
 ```
 yarn add react-native-audio-record
-react-native link react-native-audio-record
+cd ios
+pod install
 ```
 
 ## Usage
 ```js
-import AudioRecord from 'react-native-audio-record';
+import AudioRecord from 'react-native-buffered-audio-record';
 
 const options = {
   sampleRate: 16000,  // default 44100
   channels: 1,        // 1 or 2, default 1
   bitsPerSample: 16,  // 8 or 16, default 16
   audioSource: 6,     // android only (see below)
+  bufferSize: 4096,   // default 2048
   wavFile: 'test.wav' // default 'audio.wav'
 };
 
@@ -50,6 +52,7 @@ Don't forget to add microphone permission in your app.
 - `App3.js` - uses [react-native-audio-player-recorder](https://github.com/Shinetechchina/react-native-audio-player-recorder) for playback, pause and report progress
 
 ## Credits/References
+This package is a fork of [this](https://github.com/goodatlas/react-native-audio-record) with buffer size options from [here](https://github.com/xiqi/react-native-live-audio-stream)
 I'm not a native app developer. Most of the code is taken from online resources.
 - iOS [Audio Queues](https://developer.apple.com/library/content/documentation/MusicAudio/Conceptual/AudioQueueProgrammingGuide)
 - Android [AudioRecord](https://developer.android.com/reference/android/media/AudioRecord.html)

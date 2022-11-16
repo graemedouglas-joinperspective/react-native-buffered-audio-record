@@ -21,6 +21,7 @@ declare module "react-native-audio-record" {
      */
     audioSource?: number
     wavFile: string
+    bufferSize?: number
   }
 
   const AudioRecord: IAudioRecord
