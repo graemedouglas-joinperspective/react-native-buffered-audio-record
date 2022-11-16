@@ -1,5 +1,6 @@
 import { NativeModules, NativeEventEmitter } from 'react-native';
 const { RNAudioRecord } = NativeModules;
+//const EventEmitter = new NativeEventEmitter(RNAudioRecord);
 const EventEmitter = new NativeEventEmitter(RNAudioRecord);
 
 const AudioRecord = {};

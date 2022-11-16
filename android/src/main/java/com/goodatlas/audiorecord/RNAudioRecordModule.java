@@ -226,4 +226,12 @@ public class RNAudioRecordModule extends ReactContextBaseJavaModule {
         File file = new File(tmpFile);
         file.delete();
     }
+
+    @ReactMethod
+    public void addListener(String eventName) {
+    }
+
+    @ReactMethod
+    public void removeListeners(Integer count) {
+    }
 }
